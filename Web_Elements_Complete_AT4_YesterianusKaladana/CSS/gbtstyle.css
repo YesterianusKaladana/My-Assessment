@@ -57,23 +57,28 @@ header{
 
 /* Navigation styling */
 nav{
-    width: 100%;
-    height: 5%;
-    background-color: rgb(37, 150, 190);
-    display: flex;
+    
 }
 nav>div{
+  width: 100%;
+  height: 50px;
+  background-color: rgb(37, 150, 190);
+  display: flex;
+}
+nav>div>a{
     flex-grow: 1; /* child property - acting as child of navigation box*/
     border-right:1px solid black;
     display:flex; /*acting as parent of a tag*/
     justify-content: center;
     align-items: center;
-  }
-  /*chang the background using hover state*/
-  nav>div:hover,#active{
-    background-color: brown;
     font-size: 20px;
+    color: white;
   }
+  
+/*chang the background using hover state*/
+nav>div>a:hover, .active{
+  background-color: brown;
+}
 
 /* Article styling */
 article{
@@ -137,7 +142,14 @@ img {
   .col-sm-4 {
     flex: 0 0 33.333333%;
     max-width: 33.333333%;
+    /* padding: 1rem; */
+  }
+
+  .p-1 {
     padding: 1rem;
+  }
+  .pb-1 {
+    padding-bottom: 1rem;
   }
   
   h1 {
@@ -209,7 +221,7 @@ input[type=submit]{
 /* Footer styling */
 footer{
     width: 100%;
-    height: 8%;
+    height: 100px;
     background-color:rgb(37, 150, 190);
 }
 #topF{
@@ -218,13 +230,16 @@ footer{
     display: flex;
     justify-content: center;
   }
-  #topF>a,#topF>a>img{
-    height: 100%;
-    width:auto;
-  }
-  #bottomF{
-    width: 100%;
-    height:30%;
-    text-align: center;
-    font-size: 0.8em;
-  }
+
+#topF>a, #topF>a>img{
+  height: 100%;
+  width:auto;
+  color: white;
+}
+
+#bottomF{
+  width: 100%;
+  height:30%;
+  text-align: center;
+  font-size: 0.8em;
+}
